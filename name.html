@@ -19,6 +19,7 @@
 
 	<p id="msg"></p>
 	<p id="msg2"></p>
+	<p id="msg3"></p>
 
 	<script>
 		
@@ -39,15 +40,25 @@
    					 }
 
 
-
 		   			if (count<2) {
 		   				document.getElementById('msg2').innerHTML="contains at least two words";
 		   			}
 
 			}
-	
-   				
+			f2(name);
+			
 		}
+
+		function f2(name){
+
+			if (( name.charCodeAt(0) <91 && name.charCodeAt(0) > 64) || ( name.charCodeAt(0) <123 && name.charCodeAt(0) >96 ) ) {
+						document.getElementById('msg3').innerHTML=name;
+					}
+					else{
+						document.getElementById('msg3').innerHTML="must start with letter";
+					}
+			}	
+
 
 	</script>
 
