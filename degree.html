@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>degree</title>
+</head>
+<body>
+
+	<fieldset>
+		<legend>Gender</legend>
+		<form>
+			<input id="s" type="checkbox" name="ssc" value="ssc">Ssc
+			<input id="h" type="checkbox" name="hsc" value="hsc">Hsc
+			<input id="b" type="checkbox" name="bsc" value="bsc">Bsc
+		</fieldset>
+		<input type="button" name="btn" value="submit" onclick="f1()">
+		</form>
+
+		<p id="msg"></p>
+		<p id="msg1"></p>
+		<p id="msg2"></p>
+
+
+		<script>
+			function f1(){
+				
+
+				var SSC = document.getElementById('s').checked;
+				var HSC = document.getElementById('h').checked;
+				var BSC = document.getElementById('b').checked;
+
+				 if (SSC == false && HSC == false && BSC == false) {
+				 	document.getElementById('msg').innerHTML ="select at least one";
+				 }
+				 if(SSC == true) {
+				 	document.getElementById('msg').innerHTML ="SSC";
+				 }
+				 if (HSC == true) {
+					document.getElementById('msg1').innerHTML ="HSC";
+				 }
+				 if (BSC == true) {
+					document.getElementById('msg2').innerHTML ="BSC";
+				 }
+			}
+		</script>
+	
+
+</body>
+</html>
