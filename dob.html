@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>date of birth</title>
+</head>
+<body>
+
+	<fieldset>
+		<legend>date of birth</legend>
+		<form>
+			<table>
+				
+				<tr>
+					<td align="center">dd</td>
+					<td align="center">mm</td>
+					<td align="center">yyyy</td>
+				</tr>
+				<tr>
+					<td><input id="day" type="text" name="day" value="" size="4">/</td>
+					<td><input id="month" type="text" name="month" value="" size="4">/</td>
+					<td><input id="year" type="" name="year" value="" size="4"></td>
+				</tr>
+				<tr>
+					<td colspan="3"><hr></td>
+				</tr>
+				<tr>
+					<td colspan="3" align="left"><input type="button" name="btn" value="submit" onclick="f1()"></td>
+				</tr>
+			</table>
+		
+			
+		</form>
+	</fieldset>
+		<p id="msg"></p>
+
+
+		<script>
+			function f1(){
+
+				var day = document.getElementById('day').value;
+				var month = document.getElementById('month').value;
+				var year = document.getElementById('year').value;
+				
+
+				if ((day <1 || day > 31) || (month <1 || month > 12) || (year <1900 || year > 2020)) {
+					document.getElementById("msg").innerHTML="Invalid input";
+				}
+				else{
+					document.getElementById("msg").innerHTML = "day: "+day+"<br>"+"month: "+month+"<br>"+"year: "+year+"<br>";
+				}
+				
+			}
+		</script>
+	
+
+</body>
+</html>
