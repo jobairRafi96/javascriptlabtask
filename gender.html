@@ -8,12 +8,39 @@
 	<fieldset>
 		<legend>Gender</legend>
 		<form>
-			<input type="radio" name="gender" value="male">Male
-			<input type="radio" name="gender" value="female">Female
-			<input type="radio" name="gender" value="other">other
+			<input id="m" type="radio" name="gender" value="male">Male
+			<input id="f" type="radio" name="gender" value="female">Female
+			<input id="o" type="radio" name="gender" value="other">other
 		</fieldset>
-		<input type="button" name="btn" value="submit">
+		<input type="button" name="btn" value="submit" onclick="f1()">
 		</form>
+
+		<p id="msg"></p>
+
+
+		<script>
+			function f1(){
+				//var gender = document.getElementsByClassName('gnd').checked;
+
+				//document.getElementById('msg').innerHTML = gender[0];
+
+				var male = document.getElementById('m').checked;
+				var female = document.getElementById('f').checked;
+				var other = document.getElementById('o').checked;
+
+				 if (male == false && female == false && other == false) {
+				 	document.getElementById('msg').innerHTML =" can not be empty";
+				 }
+				 else if(male == true) {
+				 	document.getElementById('msg').innerHTML ="Male";
+				 }else if (female == true) {
+				 	document.getElementById('msg').innerHTML ="Female";
+				 }
+				 else{
+				 	document.getElementById('msg').innerHTML ="other";
+				 }
+			}
+		</script>
 	
 
 </body>
