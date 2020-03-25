@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>blood group</title>
+</head>
+<body>
+
+	<fieldset>
+		<legend>blood group</legend>
+		<form>
+			<select id="bg">
+				<option value="A+"> A+</option>
+				<option value="B+"> B+</option>
+				<option value="O+"> O+</option>
+				<option value="O-"> O-</option>
+			</select>
+	
+		</fieldset>
+		<input type="button" name="btn" value="submit" onclick="f1()">
+		</form>
+
+		<p id="msg"></p>
+
+
+		<script>
+			function f1(){
+			
+
+				var bg = document.getElementById("bg");
+				var result = bg.options[bg.selectedIndex].value;
+				document.getElementById('msg').innerHTML = result;
+			}
+		</script>
+	
+
+</body>
+</html>
