@@ -18,6 +18,7 @@
 	</table>
 
 	<p id="msg"></p>
+	<p id="msg2"></p>
 
 	<script>
 		
@@ -27,24 +28,25 @@
 			var name = document.getElementById('name').value;
 			if (name == "") {
 				 document.getElementById('msg').innerHTML="cannot be empty";
-				 break;
 
-			}
+				}else{
+				 	var count = 0;
+  					 words = name.split(" "); 
 
-			
-   				var count = 0;
-  				 words = name.split(" "); 
     				for (i=0 ; i < words.length ; i++){
-      
        				if (words[i] != "")
           				count += 1; 
    					 }
 
-   			if (count<2) {
-   				document.getElementById('msg').innerHTML="contains at least two words";
-   				break;
-   			}
 
+
+		   			if (count<2) {
+		   				document.getElementById('msg2').innerHTML="contains at least two words";
+		   			}
+
+			}
+	
+   				
 		}
 
 	</script>
